@@ -1,0 +1,2391 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Securite"
+    tools:showIn="@layout/activity_securite">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".Securite"
+            tools:showIn="@layout/activity_securite">
+
+          <TextView
+              android:id="@+id/titre0"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:layout_marginTop="36dp"
+              android:textSize="25sp"
+              android:visibility="gone"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+              <CheckedTextView
+                android:id="@+id/point0_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titre0" />
+
+            <Switch
+                android:id="@+id/switch0_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_0"
+                app:layout_constraintTop_toTopOf="@+id/point0_0" />
+
+              <CheckedTextView
+                android:id="@+id/point0_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_0" />
+
+            <Switch
+                android:id="@+id/switch0_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_1"
+                app:layout_constraintTop_toTopOf="@+id/point0_1" />
+
+              <CheckedTextView
+                android:id="@+id/point0_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_1" />
+
+            <Switch
+                android:id="@+id/switch0_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_2"
+                app:layout_constraintTop_toTopOf="@+id/point0_2" />
+
+              <CheckedTextView
+                android:id="@+id/point0_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_2" />
+
+            <Switch
+                android:id="@+id/switch0_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_3"
+                app:layout_constraintTop_toTopOf="@+id/point0_3" />
+
+              <CheckedTextView
+                android:id="@+id/point0_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_3" />
+
+            <Switch
+                android:id="@+id/switch0_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_4"
+                app:layout_constraintTop_toTopOf="@+id/point0_4" />
+
+              <CheckedTextView
+                android:id="@+id/point0_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_4" />
+
+            <Switch
+                android:id="@+id/switch0_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_5"
+                app:layout_constraintTop_toTopOf="@+id/point0_5" />
+
+              <CheckedTextView
+                android:id="@+id/point0_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_5" />
+
+            <Switch
+                android:id="@+id/switch0_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_6"
+                app:layout_constraintTop_toTopOf="@+id/point0_6" />
+
+              <CheckedTextView
+                android:id="@+id/point0_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_6" />
+
+            <Switch
+                android:id="@+id/switch0_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_7"
+                app:layout_constraintTop_toTopOf="@+id/point0_7" />
+
+              <CheckedTextView
+                android:id="@+id/point0_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_7" />
+
+            <Switch
+                android:id="@+id/switch0_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_8"
+                app:layout_constraintTop_toTopOf="@+id/point0_8" />
+
+              <CheckedTextView
+                android:id="@+id/point0_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point0_8" />
+
+            <Switch
+                android:id="@+id/switch0_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point0_9"
+                app:layout_constraintTop_toTopOf="@+id/point0_9" />
+
+          <EditText
+              android:id="@+id/editText0"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="8dp"
+              android:ems="10"
+              android:imeOptions="actionDone"
+              android:inputType="textMultiLine"
+              android:visibility="gone"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/point0_9" />
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photos0"
+              android:layout_width="match_parent"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_height="0dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/editText0">
+
+                <ImageView
+                    android:id="@+id/monimage0_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimage0_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimage0_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <Button
+                  android:id="@+id/button_image_0"
+                  android:layout_width="229dp"
+                  android:layout_height="46dp"
+                  android:layout_marginStart="100dp"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginEnd="100dp"
+                  android:layout_marginRight="100dp"
+                  android:text="@string/ajouter_des_photos"
+                  android:visibility="gone"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/Photos0"
+                  tools:layout_editor_absoluteY="16dp" />
+
+          <TextView
+              android:id="@+id/titre1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:layout_marginTop="36dp"
+              android:textSize="25sp"
+              android:visibility="gone"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/button_image_0" />
+
+              <CheckedTextView
+                android:id="@+id/point1_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titre1" />
+
+            <Switch
+                android:id="@+id/switch1_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_0"
+                app:layout_constraintTop_toTopOf="@+id/point1_0" />
+
+              <CheckedTextView
+                android:id="@+id/point1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_0" />
+
+            <Switch
+                android:id="@+id/switch1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_1"
+                app:layout_constraintTop_toTopOf="@+id/point1_1" />
+
+              <CheckedTextView
+                android:id="@+id/point1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_1" />
+
+            <Switch
+                android:id="@+id/switch1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_2"
+                app:layout_constraintTop_toTopOf="@+id/point1_2" />
+
+              <CheckedTextView
+                android:id="@+id/point1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_2" />
+
+            <Switch
+                android:id="@+id/switch1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_3"
+                app:layout_constraintTop_toTopOf="@+id/point1_3" />
+
+              <CheckedTextView
+                android:id="@+id/point1_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_3" />
+
+            <Switch
+                android:id="@+id/switch1_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_4"
+                app:layout_constraintTop_toTopOf="@+id/point1_4" />
+
+              <CheckedTextView
+                android:id="@+id/point1_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_4" />
+
+            <Switch
+                android:id="@+id/switch1_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_5"
+                app:layout_constraintTop_toTopOf="@+id/point1_5" />
+
+              <CheckedTextView
+                android:id="@+id/point1_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_5" />
+
+            <Switch
+                android:id="@+id/switch1_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_6"
+                app:layout_constraintTop_toTopOf="@+id/point1_6" />
+
+              <CheckedTextView
+                android:id="@+id/point1_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_6" />
+
+            <Switch
+                android:id="@+id/switch1_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_7"
+                app:layout_constraintTop_toTopOf="@+id/point1_7" />
+
+              <CheckedTextView
+                android:id="@+id/point1_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_7" />
+
+            <Switch
+                android:id="@+id/switch1_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_8"
+                app:layout_constraintTop_toTopOf="@+id/point1_8" />
+
+              <CheckedTextView
+                android:id="@+id/point1_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point1_8" />
+
+            <Switch
+                android:id="@+id/switch1_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point1_9"
+                app:layout_constraintTop_toTopOf="@+id/point1_9" />
+
+          <EditText
+              android:id="@+id/editText1"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="8dp"
+              android:ems="10"
+              android:imeOptions="actionDone"
+              android:inputType="textMultiLine"
+              android:visibility="gone"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/point1_9" />
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photos1"
+              android:layout_width="match_parent"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_height="0dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/editText1">
+
+                <ImageView
+                    android:id="@+id/monimage1_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimage1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimage1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <Button
+                  android:id="@+id/button_image_1"
+                  android:layout_width="229dp"
+                  android:layout_height="46dp"
+                  android:layout_marginStart="100dp"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginEnd="100dp"
+                  android:layout_marginRight="100dp"
+                  android:text="@string/ajouter_des_photos"
+                  android:visibility="gone"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/Photos1"
+                  tools:layout_editor_absoluteY="16dp" />
+
+          <TextView
+              android:id="@+id/titre2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:layout_marginTop="36dp"
+              android:textSize="25sp"
+              android:visibility="gone"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/button_image_1" />
+
+              <CheckedTextView
+                android:id="@+id/point2_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titre2" />
+
+            <Switch
+                android:id="@+id/switch2_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_0"
+                app:layout_constraintTop_toTopOf="@+id/point2_0" />
+
+              <CheckedTextView
+                android:id="@+id/point2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_0" />
+
+            <Switch
+                android:id="@+id/switch2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_1"
+                app:layout_constraintTop_toTopOf="@+id/point2_1" />
+
+              <CheckedTextView
+                android:id="@+id/point2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_1" />
+
+            <Switch
+                android:id="@+id/switch2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_2"
+                app:layout_constraintTop_toTopOf="@+id/point2_2" />
+
+              <CheckedTextView
+                android:id="@+id/point2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_2" />
+
+            <Switch
+                android:id="@+id/switch2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_3"
+                app:layout_constraintTop_toTopOf="@+id/point2_3" />
+
+              <CheckedTextView
+                android:id="@+id/point2_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_3" />
+
+            <Switch
+                android:id="@+id/switch2_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_4"
+                app:layout_constraintTop_toTopOf="@+id/point2_4" />
+
+              <CheckedTextView
+                android:id="@+id/point2_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_4" />
+
+            <Switch
+                android:id="@+id/switch2_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_5"
+                app:layout_constraintTop_toTopOf="@+id/point2_5" />
+
+              <CheckedTextView
+                android:id="@+id/point2_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_5" />
+
+            <Switch
+                android:id="@+id/switch2_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_6"
+                app:layout_constraintTop_toTopOf="@+id/point2_6" />
+
+              <CheckedTextView
+                android:id="@+id/point2_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_6" />
+
+            <Switch
+                android:id="@+id/switch2_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_7"
+                app:layout_constraintTop_toTopOf="@+id/point2_7" />
+
+              <CheckedTextView
+                android:id="@+id/point2_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_7" />
+
+            <Switch
+                android:id="@+id/switch2_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_8"
+                app:layout_constraintTop_toTopOf="@+id/point2_8" />
+
+              <CheckedTextView
+                android:id="@+id/point2_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point2_8" />
+
+            <Switch
+                android:id="@+id/switch2_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point2_9"
+                app:layout_constraintTop_toTopOf="@+id/point2_9" />
+
+          <EditText
+              android:id="@+id/editText2"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="8dp"
+              android:ems="10"
+              android:imeOptions="actionDone"
+              android:inputType="textMultiLine"
+              android:visibility="gone"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/point2_9" />
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photos2"
+              android:layout_width="match_parent"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_height="0dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/editText2">
+
+                <ImageView
+                    android:id="@+id/monimage2_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimage2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimage2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <Button
+                  android:id="@+id/button_image_2"
+                  android:layout_width="229dp"
+                  android:layout_height="46dp"
+                  android:layout_marginStart="100dp"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginEnd="100dp"
+                  android:layout_marginRight="100dp"
+                  android:text="@string/ajouter_des_photos"
+                  android:visibility="gone"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/Photos2"
+                  tools:layout_editor_absoluteY="16dp" />
+
+          <TextView
+              android:id="@+id/titre3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:layout_marginTop="36dp"
+              android:textSize="25sp"
+              android:visibility="gone"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/button_image_2" />
+
+              <CheckedTextView
+                android:id="@+id/point3_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titre3" />
+
+            <Switch
+                android:id="@+id/switch3_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_0"
+                app:layout_constraintTop_toTopOf="@+id/point3_0" />
+
+              <CheckedTextView
+                android:id="@+id/point3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_0" />
+
+            <Switch
+                android:id="@+id/switch3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_1"
+                app:layout_constraintTop_toTopOf="@+id/point3_1" />
+
+              <CheckedTextView
+                android:id="@+id/point3_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_1" />
+
+            <Switch
+                android:id="@+id/switch3_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_2"
+                app:layout_constraintTop_toTopOf="@+id/point3_2" />
+
+              <CheckedTextView
+                android:id="@+id/point3_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_2" />
+
+            <Switch
+                android:id="@+id/switch3_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_3"
+                app:layout_constraintTop_toTopOf="@+id/point3_3" />
+
+              <CheckedTextView
+                android:id="@+id/point3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_3" />
+
+            <Switch
+                android:id="@+id/switch3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_4"
+                app:layout_constraintTop_toTopOf="@+id/point3_4" />
+
+              <CheckedTextView
+                android:id="@+id/point3_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_4" />
+
+            <Switch
+                android:id="@+id/switch3_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_5"
+                app:layout_constraintTop_toTopOf="@+id/point3_5" />
+
+              <CheckedTextView
+                android:id="@+id/point3_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_5" />
+
+            <Switch
+                android:id="@+id/switch3_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_6"
+                app:layout_constraintTop_toTopOf="@+id/point3_6" />
+
+              <CheckedTextView
+                android:id="@+id/point3_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_6" />
+
+            <Switch
+                android:id="@+id/switch3_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_7"
+                app:layout_constraintTop_toTopOf="@+id/point3_7" />
+
+              <CheckedTextView
+                android:id="@+id/point3_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_7" />
+
+            <Switch
+                android:id="@+id/switch3_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_8"
+                app:layout_constraintTop_toTopOf="@+id/point3_8" />
+
+              <CheckedTextView
+                android:id="@+id/point3_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point3_8" />
+
+            <Switch
+                android:id="@+id/switch3_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point3_9"
+                app:layout_constraintTop_toTopOf="@+id/point3_9" />
+
+          <EditText
+              android:id="@+id/editText3"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="8dp"
+              android:ems="10"
+              android:imeOptions="actionDone"
+              android:inputType="textMultiLine"
+              android:visibility="gone"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/point3_9" />
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photos3"
+              android:layout_width="match_parent"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_height="0dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/editText3">
+
+                <ImageView
+                    android:id="@+id/monimage3_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimage3_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimage3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <Button
+                  android:id="@+id/button_image_3"
+                  android:layout_width="229dp"
+                  android:layout_height="46dp"
+                  android:layout_marginStart="100dp"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginEnd="100dp"
+                  android:layout_marginRight="100dp"
+                  android:text="@string/ajouter_des_photos"
+                  android:visibility="gone"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/Photos3"
+                  tools:layout_editor_absoluteY="16dp" />
+
+          <TextView
+              android:id="@+id/titre4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:layout_marginTop="36dp"
+              android:textSize="25sp"
+              android:visibility="gone"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/button_image_3" />
+
+              <CheckedTextView
+                android:id="@+id/point4_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titre4" />
+
+            <Switch
+                android:id="@+id/switch4_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_0"
+                app:layout_constraintTop_toTopOf="@+id/point4_0" />
+
+              <CheckedTextView
+                android:id="@+id/point4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_0" />
+
+            <Switch
+                android:id="@+id/switch4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_1"
+                app:layout_constraintTop_toTopOf="@+id/point4_1" />
+
+              <CheckedTextView
+                android:id="@+id/point4_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_1" />
+
+            <Switch
+                android:id="@+id/switch4_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_2"
+                app:layout_constraintTop_toTopOf="@+id/point4_2" />
+
+              <CheckedTextView
+                android:id="@+id/point4_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_2" />
+
+            <Switch
+                android:id="@+id/switch4_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_3"
+                app:layout_constraintTop_toTopOf="@+id/point4_3" />
+
+              <CheckedTextView
+                android:id="@+id/point4_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_3" />
+
+            <Switch
+                android:id="@+id/switch4_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_4"
+                app:layout_constraintTop_toTopOf="@+id/point4_4" />
+
+              <CheckedTextView
+                android:id="@+id/point4_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_4" />
+
+            <Switch
+                android:id="@+id/switch4_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_5"
+                app:layout_constraintTop_toTopOf="@+id/point4_5" />
+
+              <CheckedTextView
+                android:id="@+id/point4_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_5" />
+
+            <Switch
+                android:id="@+id/switch4_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_6"
+                app:layout_constraintTop_toTopOf="@+id/point4_6" />
+
+              <CheckedTextView
+                android:id="@+id/point4_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_6" />
+
+            <Switch
+                android:id="@+id/switch4_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_7"
+                app:layout_constraintTop_toTopOf="@+id/point4_7" />
+
+              <CheckedTextView
+                android:id="@+id/point4_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_7" />
+
+            <Switch
+                android:id="@+id/switch4_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_8"
+                app:layout_constraintTop_toTopOf="@+id/point4_8" />
+
+              <CheckedTextView
+                android:id="@+id/point4_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point4_8" />
+
+            <Switch
+                android:id="@+id/switch4_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point4_9"
+                app:layout_constraintTop_toTopOf="@+id/point4_9" />
+
+          <EditText
+              android:id="@+id/editText4"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="8dp"
+              android:ems="10"
+              android:imeOptions="actionDone"
+              android:inputType="textMultiLine"
+              android:visibility="gone"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/point4_9" />
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photos4"
+              android:layout_width="match_parent"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_height="0dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/editText4">
+
+                <ImageView
+                    android:id="@+id/monimage4_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimage4_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimage4_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <Button
+                  android:id="@+id/button_image_4"
+                  android:layout_width="229dp"
+                  android:layout_height="46dp"
+                  android:layout_marginStart="100dp"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginEnd="100dp"
+                  android:layout_marginRight="100dp"
+                  android:text="@string/ajouter_des_photos"
+                  android:visibility="gone"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/Photos4"
+                  tools:layout_editor_absoluteY="16dp" />
+
+          <TextView
+              android:id="@+id/titre5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:layout_marginTop="36dp"
+              android:textSize="25sp"
+              android:visibility="gone"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/button_image_4" />
+
+              <CheckedTextView
+                android:id="@+id/point5_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titre5" />
+
+            <Switch
+                android:id="@+id/switch5_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_0"
+                app:layout_constraintTop_toTopOf="@+id/point5_0" />
+
+              <CheckedTextView
+                android:id="@+id/point5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_0" />
+
+            <Switch
+                android:id="@+id/switch5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_1"
+                app:layout_constraintTop_toTopOf="@+id/point5_1" />
+
+              <CheckedTextView
+                android:id="@+id/point5_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_1" />
+
+            <Switch
+                android:id="@+id/switch5_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_2"
+                app:layout_constraintTop_toTopOf="@+id/point5_2" />
+
+              <CheckedTextView
+                android:id="@+id/point5_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_2" />
+
+            <Switch
+                android:id="@+id/switch5_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_3"
+                app:layout_constraintTop_toTopOf="@+id/point5_3" />
+
+              <CheckedTextView
+                android:id="@+id/point5_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_3" />
+
+            <Switch
+                android:id="@+id/switch5_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_4"
+                app:layout_constraintTop_toTopOf="@+id/point5_4" />
+
+              <CheckedTextView
+                android:id="@+id/point5_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_4" />
+
+            <Switch
+                android:id="@+id/switch5_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_5"
+                app:layout_constraintTop_toTopOf="@+id/point5_5" />
+
+              <CheckedTextView
+                android:id="@+id/point5_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_5" />
+
+            <Switch
+                android:id="@+id/switch5_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_6"
+                app:layout_constraintTop_toTopOf="@+id/point5_6" />
+
+              <CheckedTextView
+                android:id="@+id/point5_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_6" />
+
+            <Switch
+                android:id="@+id/switch5_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_7"
+                app:layout_constraintTop_toTopOf="@+id/point5_7" />
+
+              <CheckedTextView
+                android:id="@+id/point5_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_7" />
+
+            <Switch
+                android:id="@+id/switch5_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_8"
+                app:layout_constraintTop_toTopOf="@+id/point5_8" />
+
+              <CheckedTextView
+                android:id="@+id/point5_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/point5_8" />
+
+            <Switch
+                android:id="@+id/switch5_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="0dp"
+                android:textOff="@string/non_conf"
+                android:textOn="@string/conf"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/point5_9"
+                app:layout_constraintTop_toTopOf="@+id/point5_9" />
+
+          <EditText
+              android:id="@+id/editText5"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="8dp"
+              android:ems="10"
+              android:imeOptions="actionDone"
+              android:inputType="textMultiLine"
+              android:visibility="gone"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/point5_9" />
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photos5"
+              android:layout_width="match_parent"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_height="0dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/editText5">
+
+                <ImageView
+                    android:id="@+id/monimage5_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimage5_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimage5_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <Button
+                  android:id="@+id/button_image_5"
+                  android:layout_width="229dp"
+                  android:layout_height="46dp"
+                  android:layout_marginStart="100dp"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginEnd="100dp"
+                  android:layout_marginRight="100dp"
+                  android:text="@string/ajouter_des_photos"
+                  android:visibility="gone"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/Photos5"
+                  tools:layout_editor_absoluteY="16dp" />
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf0"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/button_image_5">
+
+                <ImageView
+                    android:id="@+id/monimagef_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf1"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf0">
+
+                <ImageView
+                    android:id="@+id/monimagef_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf2"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf1">
+
+                <ImageView
+                    android:id="@+id/monimagef_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf3"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf2">
+
+                <ImageView
+                    android:id="@+id/monimagef_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf4"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf3">
+
+                <ImageView
+                    android:id="@+id/monimagef_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf5"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf4">
+
+                <ImageView
+                    android:id="@+id/monimagef_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf6"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf5">
+
+                <ImageView
+                    android:id="@+id/monimagef_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf7"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf6">
+
+                <ImageView
+                    android:id="@+id/monimagef_21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf8"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf7">
+
+                <ImageView
+                    android:id="@+id/monimagef_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_26"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/Photosf9"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/Photosf8">
+
+                <ImageView
+                    android:id="@+id/monimagef_27"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+
+                <ImageView
+                    android:id="@+id/monimagef_28"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+                <ImageView
+                    android:id="@+id/monimagef_29"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

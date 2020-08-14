@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.audit">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name="com.audit.Signature"
+            android:label="@string/title_activity_sign"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.Signature_Tech"
+            android:label="@string/title_activity_sign_tech"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.Q1"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_q1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.Audits"
+            android:label="@string/title_activity_audits"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.Securite"
+            android:label="@string/title_activity_securite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.Nouveau"
+            android:label="@string/title_activity_nouveau"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.Apercu"
+            android:label="@string/title_activity_apercu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.Login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.audit.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

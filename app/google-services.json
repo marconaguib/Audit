@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "952074470121",
+    "firebase_url": "https://kyntus-qse.firebaseio.com",
+    "project_id": "kyntus-qse",
+    "storage_bucket": "kyntus-qse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952074470121:android:543ea6d5d2994fb3682678",
+        "android_client_info": {
+          "package_name": "com.audit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952074470121-oku5omq032tul5qeobb6t8rspng9iql8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.audit",
+            "certificate_hash": "34a4c9dc12e2b849dadb3b0bef6b79eb3cf8d80a"
+          }
+        },
+        {
+          "client_id": "952074470121-df9mcf2c4v8r1tcf1jqst4539rtsimkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlwNFVDVe6FxdxNLmg3l1_jUf3LThl11I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952074470121-df9mcf2c4v8r1tcf1jqst4539rtsimkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

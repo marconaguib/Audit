@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.audit.Nouveau"
+    tools:showIn="@layout/activity_nouveau"
+    android:clickable="true"
+    android:focusableInTouchMode="true" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.audit.Nouveau"
+        tools:showIn="@layout/activity_nouveau"
+        android:clickable="true"
+        android:focusableInTouchMode="true">
+
+
+        <TextView
+            android:layout_width="76dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/march"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerMarche"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerMarche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="112dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="116dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/intervenant"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerIntervenant"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerIntervenant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="180dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="179dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="@string/nom_du_technicien"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/nomTechnicien"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/nomTechnicien"
+            android:layout_width="328dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="268dp"
+            android:autofillHints=""
+            android:hint="@string/signataire"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="187dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/type_du_conr_le"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerType"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="372dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

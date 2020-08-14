@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Audit</string>
+    <string name="action_settings">Ma signature</string>
+    <string name="action_login">Connexion</string>
+    <string name="bienvenue_audit">Bienvenue à Audit !</string>
+    <string name="ajout_audit">Ajout Audit</string>
+    <string name="title_activity_qualite">Audit qualité</string>
+    <string name="signataire">Signataire (s\'il est présent)</string>
+    <string name="entit">Entité</string>
+    <string name="smt">SMT</string>
+    <string name="htel">HTEL</string>
+    <string name="kyntus">Kyntus</string>
+    <string name="vdlf">VDLF</string>
+    <string name="march">Marché</string>
+    <string name="anfi">ANFI</string>
+    <string name="racco">Raccordement</string>
+    <string name="intervenant">Intervenant</string>
+    <string name="nom_du_technicien">Nom du Technicien</string>
+    <string name="type_du_conr_le">Activité</string>
+
+    <string name="title_activity_nouveau">Nouveau</string>
+    <string name="title_activity_securite">Audit Sécurité</string>
+    <string name="audit_s">Audit Sécurité</string>
+    <string name="title_activity_audits">Audits</string>
+    <string name="title_activity_q1">Audit Q1</string>
+    <string name="title_activity_identifiant">Votre Profil</string>
+    <string name="identifiant">Adresse Mail</string>
+    <string name="title_activity_sign">Signature Auditeur</string>
+    <string name="title_activity_sign_tech">Signature Technicien</string>
+    <string name="title_activity_apercu">Aperçu</string>
+    <string name="title_activity_login">Connexion</string>
+
+    <string name="firebase_status_fmt">Firebase UID: %s</string>
+    <string name="auth_failed">Mauvaise adresse mail et/ou mot de passe.</string>
+    <string name="signed_in">Connecté</string>
+    <string name="signed_out">Merci de vous connecter</string>
+    <string name="emailpassword_title_text">Connexion</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="adresse_mail">Adresse Mail</string>
+    <string name="desc_firebase_lockup">desc_firebase_lockup</string>
+    <string name="hint_email">Adresse mail</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="create_account">Create account</string>
+    <string name="sign_out">Se déconnecter</string>
+    <string name="reload">Recharger</string>
+    <string name="conf">conf.</string>
+    <string name="non_conf">Non conf.</string>
+    <string name="ajouter_des_photos">Ajouter des photos</string>
+</resources>
