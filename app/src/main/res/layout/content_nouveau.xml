@@ -63,7 +63,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="179dp"
+            android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
@@ -80,7 +80,6 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="268dp"
             android:autofillHints=""
-            android:hint="@string/signataire"
             android:inputType="text"
             android:maxLines="1"
             app:layout_constraintStart_toStartOf="parent"

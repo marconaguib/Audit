@@ -36,6 +36,8 @@ import static com.audit.MainActivity.adressefichiercree;
 import static com.audit.MainActivity.signe_par_tech;
 
 public class Apercu extends AppCompatActivity implements OnPageChangeListener,OnLoadCompleteListener{
+    //Cette page affiche l'aperçu, puis, si le technicien n'a pas encore signé, lui permet de le faire
+    //Sinon, elle permet de sauvegarder et de quitter
     private static final String TAG = MainActivity.class.getSimpleName();
     PDFView pdfView;
     Integer pageNumber = 0;
@@ -59,8 +61,11 @@ public class Apercu extends AppCompatActivity implements OnPageChangeListener,On
     @Override
     public void onResume(){
         super.onResume();
+        //Il est important que cela soit fait dans onResume et pas dans onCreate
+        //Pour que la vérification de l'existence de la signature soit faite APRES la signature
         File signature = new File(IMAGE_PATH);
         if(signature.exists()){
+            //cette variable est importante pour que les messages qui s'affichent à la sortie de l'aprecu soient bons
             signe_par_tech = true;
             fab.setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.O)
@@ -79,6 +84,10 @@ public class Apercu extends AppCompatActivity implements OnPageChangeListener,On
                 }
             });
             fab.setImageResource(R.drawable.ic_save);
+            //La signature existe. Il faut :
+            // 1- la déposer sur un nouveau PDF AU BON ENDROIT indiqué par Sign_Position_Top
+            // 2- remplacer l'ancien PDF par le nouveau
+            // 3- SUPPRIMER le fichier JPG contenant la signature
             try {
                 PdfReader reader = new PdfReader(adressefichiercree);
                 PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(adressefichiercree.replace(".pdf","_stamped.pdf")));
@@ -102,6 +111,8 @@ public class Apercu extends AppCompatActivity implements OnPageChangeListener,On
             }
         }
         else{
+            //La signature n'existe pas.
+            //Le bouton doit permettre de passer à la page de signature
             fab.setImageResource(R.drawable.ic_pen);
             fab.setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.O)
@@ -113,6 +124,7 @@ public class Apercu extends AppCompatActivity implements OnPageChangeListener,On
         }
     }
     
+    //Fonctions d'affichage
     private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
@@ -168,12 +180,13 @@ public class Apercu extends AppCompatActivity implements OnPageChangeListener,On
         startActivity(intent);
     }
 
+    // A la sorite, cette fonction affiche le bon Dialogbox, en fonction des cas
     @Override
     public void onBackPressed() {
         if(!signe_par_tech){
             new AlertDialog.Builder(this)
                     .setTitle("Retour en arrière sans signer")
-                    .setMessage("Le technicien n'ayant pas signé, le contrôle n'est pas valide. Êtes vous sûr de vouloir retourner à la saisie ?")
+                    .setMessage("Le représentant n'ayant pas signé, le contrôle n'est pas valide. Êtes vous sûr de vouloir retourner à la saisie ?")
                     .setNegativeButton("Non", null)
                     .setPositiveButton("Oui", new DialogInterface.OnClickListener() {
 
@@ -185,7 +198,7 @@ public class Apercu extends AppCompatActivity implements OnPageChangeListener,On
         else {
             new AlertDialog.Builder(this)
                     .setTitle("Retour à la saisie")
-                    .setMessage("Si vous retournez à la page de saisie, la signature du technicien va s'effacer et sera à remettre. Voulez-vous retourner quand même")
+                    .setMessage("Si vous retournez à la page de saisie, la signature du représentant va s'effacer et sera à remettre. Voulez-vous retourner quand même")
                     .setNegativeButton("Non", null)
                     .setNeutralButton("Sauvegarder et quitter",new DialogInterface.OnClickListener() {
 

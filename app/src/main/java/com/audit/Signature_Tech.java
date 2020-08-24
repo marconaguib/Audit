@@ -8,6 +8,7 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -56,6 +57,7 @@ public class Signature_Tech extends AppCompatActivity {
 
     }
 
+    //Compresser et sauvegarder la signature
     public void saveImage(Bitmap myBitmap) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
@@ -75,7 +77,7 @@ public class Signature_Tech extends AppCompatActivity {
                     new String[]{f.getPath()},
                     new String[]{"image/jpeg"}, null);
             fo.close();
-            //Toast.makeText(getApplicationContext(),"Signature sauvgardée.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Signature sauvgardée.",Toast.LENGTH_SHORT).show();
             Log.d("TAG", "File Saved::--->" + f.getAbsolutePath());
             finish();
         } catch (IOException e1) {
@@ -83,11 +85,4 @@ public class Signature_Tech extends AppCompatActivity {
         }
 
     }
-/*
-    @Override
-    public void onBackPressed() {
-        bitmap = signatureView.getSignatureBitmap();
-        saveImage(bitmap);
-    }
-*/
 }

@@ -57,6 +57,7 @@ public class Signature extends AppCompatActivity {
 
     }
 
+    //Compresser et sauvegarder la signature
     public void saveImage(Bitmap myBitmap) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
@@ -84,5 +85,4 @@ public class Signature extends AppCompatActivity {
         }
 
     }
-
 }

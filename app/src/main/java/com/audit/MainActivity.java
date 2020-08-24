@@ -36,7 +36,6 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Objects;
 
 import static com.audit.R.id.bienvenue;
@@ -77,15 +76,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
                       
-
+        //Demandes des permissions, si elles ne sont pas déjà acquises. 
         permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
         permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
         permissions.add(Manifest.permission.CAMERA);
         permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-
         permissionsToRequest = permissionsToRequest(permissions);
-        
-        
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (permissionsToRequest.size() > 0) {
                 requestPermissions(permissionsToRequest.toArray(
@@ -93,14 +89,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         
+        //Création du répertoire propre à l'application
         final File repertoire = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/Android/data/com.audit/");
         if(!repertoire.exists()){
             repertoire.mkdir();
             NumeroLocal=0;
         }
         
+        //Initialiser les deux boutons
         ButNouveau = findViewById(R.id.buttonnouveau);
-        
         ButAudits = findViewById(R.id.buttonaudits);
         ButAudits.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        
+        //Verifier l'identification, si l'utilisateur s'était déjà identifié
         mAuth = FirebaseAuth.getInstance();
         SharedPreferences app_preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String email = app_preferences.getString("email",null);
@@ -118,12 +117,13 @@ public class MainActivity extends AppCompatActivity {
         }
         else mAuth.signOut();
 
-
+        //Initialisation de la mise à jour de la demande de géolocalisation
+        //Elle aurait pu être faite plus tard (quand elle sera nécessaire)
+        //Mais c'est mieux de la faire maintenant, comme elle met du temps.
         FusedLocationProviderClient fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         LocationRequest mLocationRequest = new LocationRequest();
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         mLocationRequest.setInterval(1000);
-
         LocationCallback locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
@@ -135,9 +135,10 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-
+        //Mise à jour
         fusedLocationClient.requestLocationUpdates(mLocationRequest,locationCallback, Looper.myLooper());
 
+        //Chargement du des deux fichiers des donnees présents dans storage, et les déposer dans le répertoire com.audit
         StorageReference storageRef = FirebaseStorage.getInstance().getReference();
         StorageReference marchesRef = storageRef.child("donnees/donnees_marches.txt");
         StorageReference pointsRef = storageRef.child("donnees/donnees_points.txt");
@@ -152,6 +153,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mAuth = FirebaseAuth.getInstance();
+        
+        //OnResume est appelée quand l'activité fille est détruite
+        //C'est le cas par exemple quand on passe à la page de connexion, puis on la ferme
+        //Il est donc nécessaire de gérer le texte d'accueil ici plutôt que dans OnCreate
         FirebaseUser currentUser = mAuth.getCurrentUser();
         TextView bienv = findViewById(bienvenue);
         if (currentUser == null) {
@@ -191,8 +196,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         } else {
-            Auditeur = Objects.requireNonNull(currentUser.getEmail()).substring(0,currentUser.getEmail().indexOf('@'));
-            bienv.setText("Bienvenue à Audit, "+Auditeur+" !");
+            Auditeur = Objects.requireNonNull(currentUser.getEmail()).substring(0,currentUser.getEmail().indexOf('@')).replace(".","");
+            bienv.setText("Bienvenue à OKULUS, "+Auditeur+" !");
             ButNouveau.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -201,6 +206,10 @@ public class MainActivity extends AppCompatActivity {
             });
         }
         
+        
+        //Petit texte pour donner la date de la dernière mise à jour
+        //Concrètement, c'est la date de la dernière modification qu'a subit le fichier data_mar
+        //Mais les deux fichiers sont toujours touchés en même temps
         TextView MiseAJour = findViewById(R.id.mise_a_jour);
         File localFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/Android/data/com.audit/data_mar");
         if (localFile.exists()) MiseAJour.setText("Dernière mise à jour des données :\n"+new SimpleDateFormat("dd-MM-yyyy HH:mm").format(localFile.lastModified()));
@@ -208,6 +217,7 @@ public class MainActivity extends AppCompatActivity {
         
     }
 
+    //Menu trois petits points
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -224,7 +234,6 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            //finish();
             goToSignature();
         }
         else if (id==R.id.action_login){
@@ -254,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    //Fonctions qui s'occupent de demander les permissions, et vérifier qu'elle sont acquises.
     private ArrayList<String> permissionsToRequest(ArrayList<String> wantedPermissions) {
         ArrayList<String> result = new ArrayList<>();
 

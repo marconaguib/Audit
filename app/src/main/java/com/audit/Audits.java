@@ -40,7 +40,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,6 +52,7 @@ public class Audits extends AppCompatActivity implements OnPageChangeListener,On
     String pdfFileName;
     String nomfichier;
 
+    //Fonctions d'affichage
     private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
@@ -90,41 +90,41 @@ public class Audits extends AppCompatActivity implements OnPageChangeListener,On
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        mStorageRef = FirebaseStorage.getInstance().getReference();
-        verifyStoragePermissions(this);
-        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        StrictMode.setVmPolicy(builder.build());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audits);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        //Accès au storage
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+        
+        //Permissions
+        verifyStoragePermissions(this);
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+        
+        //Liste des fichiers PDF dans le répertoire Audits
         final File repertoire = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/Android/data/com.audit/Audits");
         if(!repertoire.exists()) repertoire.mkdir();
         else {
             final Spinner SpinnerAudits = findViewById(R.id.spinnerAudits);
-            String[] Fichiers = new File(repertoire.getAbsolutePath()).list();
+            File[] Fichiers = new File(repertoire.getAbsolutePath()).listFiles((file, s) -> s.endsWith(".pdf"));
 
             assert Fichiers != null;
-            Arrays.sort(Fichiers, new Comparator<String>(){
-                public int compare(String f1, String f2)
-                {
-                    return Long.valueOf( new File(repertoire+f1).lastModified()).compareTo(new File(repertoire+f2).lastModified());
-                } });
+            //Trier du plus récent au plus ancien
+            Arrays.sort(Fichiers, (f1, f2) -> Long.compare(f1.lastModified(), f2.lastModified()));
             
-            List<String> ListeFichiers;
             if (Fichiers.length > 0) {
-                ListeFichiers = Arrays.asList(Fichiers);
+                //Passage d'un Array à une liste
                 List<String> ListeAudits = new ArrayList<>();
-                for (int i = 0; i < ListeFichiers.size(); i++) {
-                    if (ListeFichiers.get(i).contains(".pdf"))
-                        ListeAudits.add(ListeFichiers.get(i));
-                }
+                for (File fichier : Fichiers) ListeAudits.add(fichier.getName());
                 Collections.reverse(ListeAudits);
                 ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item, ListeAudits);
                 spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 SpinnerAudits.setAdapter(spinnerArrayAdapter);
     
+                //Le bouton sert à envoyer le fichier PDF, et, au succès, alimenter la base de données avec les données dans le CSV
                 FloatingActionButton BoutEnv = findViewById(R.id.fab);
                 if (ListeAudits.size() != 0) {
                     BoutEnv.setOnClickListener(new View.OnClickListener() {
@@ -147,7 +147,6 @@ public class Audits extends AppCompatActivity implements OnPageChangeListener,On
                                                 String line;
                                                 while ((line = reader.readLine()) != null) {
                                                     if(!line.isEmpty()) {
-                                                        Log.d("ligne", line);
                                                         String[] ligne = line.split(";");
                                                         database.child(ligne[0]).setValue(ligne[1]);
                                                     }
@@ -173,6 +172,7 @@ public class Audits extends AppCompatActivity implements OnPageChangeListener,On
                     });
                     pdfView = findViewById(R.id.pdfView);
                 }
+                //A chaque changement de l'element selectionné, on l'affiche.
                 SpinnerAudits.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -202,9 +202,9 @@ public class Audits extends AppCompatActivity implements OnPageChangeListener,On
         printBookmarksTree(pdfView.getTableOfContents(), "-");
 
     }
-    
-    
-    // Storage Permissions
+
+
+    //Fonctions qui s'occupent de demander les permissions, et vérifier qu'elle sont acquises.
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,

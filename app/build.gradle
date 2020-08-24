@@ -13,8 +13,8 @@ android {
         applicationId "com.audit"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 14
-        versionName "14"
+        versionCode 16
+        versionName "16"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

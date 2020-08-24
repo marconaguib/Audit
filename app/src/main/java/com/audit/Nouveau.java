@@ -40,6 +40,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import static com.audit.MainActivity.Auditeur;
 import static com.audit.MainActivity.Entite;
 import static com.audit.MainActivity.Intervenant;
 import static com.audit.MainActivity.Localisation;
@@ -59,24 +60,27 @@ public class Nouveau extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_nouveau);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        
+        //Vérification que le répertoire de la présence du répertoire Audits
         final File repertoire = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/Android/data/com.audit/Audits/");
         if(!repertoire.exists()){
             repertoire.mkdir();
         }
         date = dateFormat.format(new Date());
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nouveau);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
+        //Récuperer les préferences (pour avoir le dernier marche à être sélectionné, s'il y en a)
         SharedPreferences app_preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        int N_marche = app_preferences.getInt("N_marche",0);        
+        int N_marche = app_preferences.getInt("N_marche",0);
 
+        //Avoir les listes des marchés, intervenants, entites
         ArrayList<String> Entites = new ArrayList<String>();
         ArrayList<String> Marches = new ArrayList<String>();
         List<List<String>> Intervenants = new ArrayList<List<String>>();
-
-
+        
         InputStreamReader is = null;
         try {
             File donnees = new File (Environment.getExternalStorageDirectory().getAbsolutePath() +"/Android/data/com.audit/data_mar");
@@ -88,11 +92,14 @@ public class Nouveau extends AppCompatActivity {
                 if (!line.startsWith("#")) {
                     String[] ligne = line.split(";");
 
+
+                    //prendre en compte l'entite
+                    Entites.add(ligne[0]);
+                    //prendre en compte le marche
                     Marches.add(ligne[1]);
                     //ajouter les intervenants de ce marché
                     Intervenants.add(new ArrayList<String>(Arrays.asList(ligne).subList(2, ligne.length)));
-                    //prendre en compte l'entite
-                    Entites.add(ligne[0]);
+                    
                 }
             }
         } catch (IOException e) {
@@ -103,6 +110,7 @@ public class Nouveau extends AppCompatActivity {
         ArrayAdapter<String> adapterM = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,Marches);
         adapterM.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         SpinnerMarche.setAdapter(adapterM);
+        //mettre la selection sur le dernier marché selectionné
         SpinnerMarche.setSelection(N_marche);
         
         SpinnerIntervenant = findViewById(R.id.spinnerIntervenant);
@@ -114,6 +122,7 @@ public class Nouveau extends AppCompatActivity {
 
         SharedPreferences.Editor editor = app_preferences.edit();
 
+        //sauvegarder le marché dans les préference en cas de changement
         SpinnerMarche.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -131,7 +140,7 @@ public class Nouveau extends AppCompatActivity {
             }
         });
         
-        
+        //Liste des activités, je ne l'ai pas integrée dans le fichiers donnees_mar comme elle ne va pas changer aussi souvent
         ArrayList<String> Types = new ArrayList<String>();
         Types.add("Etude");
         Types.add("Raccordement");
@@ -141,12 +150,13 @@ public class Nouveau extends AppCompatActivity {
         Types.add("Poteau");
         Types.add("Infrastructure (Radio)");
         Types.add("IMES (Radio)");
+        //Types.add("Votre nouveau type");
         SpinnerType = findViewById(R.id.spinnerType);
         ArrayAdapter<String> adapterT = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,Types);
         adapterT.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         SpinnerType.setAdapter(adapterT);
 
-        
+        //Si le champ technicien est ouvert et on clique ailleurs, on veut faire disparaitre le clavier
         EditText ReponseTechnicien = findViewById(R.id.nomTechnicien);
         ReponseTechnicien.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -158,7 +168,7 @@ public class Nouveau extends AppCompatActivity {
         });
         
 
-
+        //Passer à la redaction, pourvu qu'il n'y a pas de problème de géolocalisation
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -182,17 +192,23 @@ public class Nouveau extends AppCompatActivity {
                 fusedLocationClient.requestLocationUpdates(mLocationRequest,locationCallback, Looper.myLooper());
                 if (Localisation == null) {
                     Toast.makeText(getApplicationContext(),"Merci d'activer la géolocalisation dans les paramètres de votre téléphone et de réessayer.",Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else if(ReponseTechnicien.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Merci d'indiquer le nom du représentant de l'entreprise s'il est présent, sinon mettez \"Absent\".",Toast.LENGTH_SHORT).show();
+                }else {
+                    //Recuperer les bonnes données
                     Marche = SpinnerMarche.getSelectedItem().toString();
                     Intervenant = SpinnerIntervenant.getSelectedItem().toString();
                     Type = SpinnerType.getSelectedItem().toString();
                     Technicien = ReponseTechnicien.getText().toString().replaceAll("[#$.\\[\\]]", "").replace("/","\\");
+                    //Créer les fichiers pdf et csv
+                    //Dans les noms, on évite les cartère spéciaux pour ne pas gêner la base de données
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                         NumeroLocal = (Objects.requireNonNull(repertoire.listFiles()).length) / 2 + 1;
                         NumeroLocal = (Objects.requireNonNull(repertoire.listFiles()).length) / 2 + 1;
                     }
                     String NomProvisoire = (Marche + "_" + Intervenant + "_" + Type.charAt(0) + "_"+ date).replaceAll("[#$.\\[\\]]", "");
-                    adressefichiercree = repertoire.getAbsolutePath() + "/" + NumeroLocal + "_" + Technicien + "_" + NomProvisoire + ".pdf";
+                    adressefichiercree = repertoire.getAbsolutePath() + "/" + NumeroLocal + "_" + Auditeur + "_" + NomProvisoire + ".pdf";
                     File dest = new File(adressefichiercree);
                     File destcsv = new File(adressefichiercree.replace(".pdf", ".csv"));
                     try {
@@ -214,7 +230,7 @@ public class Nouveau extends AppCompatActivity {
     }
 
 
-
+    //faire disparaitre le clavier
     public void hideKeyboard(View view) {
         InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Nouveau.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);

@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity{
 
     private static final String TAG = "EmailPassword";
     
-    // [START declare_auth]
+    // Declarations
     private FirebaseAuth mAuth;
     public static final int RESULT_NEEDS_MFA_SIGN_IN = 42;
     LinearLayout emailPasswordButtons,emailPasswordFields;
@@ -41,7 +41,6 @@ public class Login extends AppCompatActivity{
     EditText fieldEmail,fieldPassword;
     LinearLayout signedInButtons;
     TextView status;
-    // [END declare_auth]
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,7 @@ public class Login extends AppCompatActivity{
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        //Les elements de l'affichage
         emailPasswordButtons = findViewById(R.id.emailPasswordButtons);
         emailPasswordFields = findViewById(R.id.emailPasswordFields);
         emailSignInButton = findViewById(R.id.emailSignInButton);
@@ -62,7 +61,7 @@ public class Login extends AppCompatActivity{
         status = findViewById(R.id.status);
         mAuth = FirebaseAuth.getInstance();
         
-        // Buttons
+        //Récuperer les préferences pour sauvegarder l'adresse mail et mot de passe
         SharedPreferences app_preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = app_preferences.edit();
                
@@ -75,13 +74,13 @@ public class Login extends AppCompatActivity{
                 if (!validateForm()) {
                     return;
                 }
-                // [START sign_in_with_email]
+                //Connexion
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
+                                    // Succès. Mise à jour des données importante
                                     Log.d(TAG, "signInWithEmail:success");
                                     Toast.makeText(Login.this, "Connexion réussie.",
                                             Toast.LENGTH_SHORT).show();
@@ -92,10 +91,11 @@ public class Login extends AppCompatActivity{
                                     editor.putString("email",email);
                                     editor.putString("password",password);
                                     editor.apply();
+                                    //Passer à la signature
                                     if (!new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/Android/data/com.audit/signature.jpg").exists()) goToSignature();
 
                                 } else {
-                                    // If sign in fails, display a message to the user.
+                                    //Message d'échec sinon
                                     Log.w(TAG, "signInWithEmail:failure", task.getException());
                                     Toast.makeText(Login.this, "Echec d'authentification",
                                             Toast.LENGTH_SHORT).show();
@@ -110,17 +110,20 @@ public class Login extends AppCompatActivity{
                         });
             }
         });
+        //Bouton déconnexion
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAuth.signOut();
                 updateUI(null);
+                //Suppression de la signature
                 new File (Environment.getExternalStorageDirectory().getAbsolutePath() +"/Android/data/com.audit/signature.jpg").delete();
                 editor.putString("email",null);
                 editor.putString("password",null);
                 editor.apply();
             }
         });
+        //Vérifier qu'on est toujours connecté
         reloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -143,8 +146,7 @@ public class Login extends AppCompatActivity{
             }
         });
     }
-
-    // [START on_start_check_user]
+    
     @Override
     public void onStart() {
         super.onStart();
@@ -152,9 +154,8 @@ public class Login extends AppCompatActivity{
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
-    // [END on_start_check_user]
     
-
+    //Valider les entrées
     private boolean validateForm() {
         boolean valid = true;
 
@@ -177,6 +178,7 @@ public class Login extends AppCompatActivity{
         return valid;
     }
 
+    //Mise à jour du texte en fonction de l'utilisateur
     private void updateUI(FirebaseUser user) {
        // hideProgressBar();
         if (user != null) {
@@ -195,6 +197,8 @@ public class Login extends AppCompatActivity{
         }
     }
 
+    //Detecter les erreurs dues à plusieurs raisons à la fois
+    //cf le Logcat
     private void checkForMultiFactorFailure(Exception e) {
         // Multi-factor authentication with SMS is currently only available for
         // Google Cloud Identity Platform projects. For more information:
