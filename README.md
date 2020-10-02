@@ -1,4 +1,4 @@
-# Audit
+# OKULUS (anciennement Audit)
 
 Elle est mise à la disposition des contrôleurs. Je l'ai conçue et developpée en Java, en utilisant Android Studio. La version 1.9 est actuellement disponible sur Google Play. Voici le déroulement typique de son utilisation :
 
